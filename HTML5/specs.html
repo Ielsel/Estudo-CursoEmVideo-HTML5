@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/specs.css"> <!--Linkando css específico para aba specs-->
+    <title>Specs</title>
+</head>
+<script lang="JavaScript" src="funcoes.js"></script>
+<body>
+    <header>
+        <div id = "interface">
+        <header id = "cabecalho">
+            <hgroup> 
+                <h1>Google Glass</h1> 
+                <h2>A revolução do Google está chegando</h2>
+            </hgroup> 
+            <figure class="foto-legenda">
+                <img id="icone" src="imagens/i7.jpg"/>
+                <figcaption>
+                    <h3>Google Glass</h3>
+                    <p>Uma nova maneira de ver o mundo</p>
+                </figcaption>
+            </figure>
+    
+        <nav id="menu">
+            <h1>Menu Principal</h1>
+            <ul type="disc">
+                <li onmouseover="mudaFoto('imagens/i3.jpg')" onmouseout="mudaFoto('imagens/i5.jpeg')"><a href="site.html">Home</a></li>
+                <li onmouseover="mudaFoto('imagens/i7.jpg')" onmouseout="mudaFoto('imagens/i7.jpg')"><a href="site.html"><a href="specs.html">Especificações</a></li> 
+                <li><a href="fotos.html">Fotos</a></li>
+                <li>Multimídia</li>
+                <li>Fale conosco</li>
+            </ul>
+        </nav>
+</header> 
+<section id="corpo-full">
+    <article id="noticia-principal">
+        <header id="cabecalho-artigo">
+            <hgroup>
+                <h3>Glass > Especificações</h3>
+                <h1>Raio-X no Google Glass</h1>
+                <h2>por Gustavo Guanabara</h2>
+                <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+            </hgroup>
+        </header>   
+        <section id="conteudo">
+            <img src="imagens/i7.jpg" usemap="#meumapa"> <!--Vai linkar na tag <map>-->
+            <map name="meumapa"> <!--Vai criar áreas interativas na tela-->
+                <area shape="rect" coords="160,50,187,77" href="artigos.html#tela" target="janela"/> <!--shape = formato da área rect = reto = quadrado, coords = coordenadas da área interativa, href = arquivo que vai ser aberto ao interagir na área <map>, target = onde vai abrir o arquivo, nesse caso está para "janela" que é o "name" do iframe, então o conteúdo aparecerá no iframe-->
+                <area shape="circle" coords="93,123,45" href="artigos.html#camera" target="janela"> <!--Coords para circle é centro, raio. Área poligonal, ou seja, formatos específicos deve ser informado cada xy de cada ponta-->
+            </map>
+            <iframe src="artigos.html" name="janela" id="frame-spec" scrolling="no"><!--scrolling="no" faz sumir a barra de scroll--></iframe> <!--linkando um arquivo html em outro-->
+        </section>
+    </article>
+</section>
+<footer id="rodape">
+    <p>Copyright &copy; 2023 - by Leslei Lima<br/>Youtube | Twitter</p>
+</footer>
+</div>
+</body>
+</html>

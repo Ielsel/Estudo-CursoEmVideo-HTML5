@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="form.css">
+    <title>Document</title>
+    <script>
+        function calc_total(){
+            /*Vai pegar o input cQtd para poder manipular o valor, parseInt para transformar em valores numéricos inteiros*/
+            var qtd = parseInt(document.getElementById('cQtd').value);
+
+            /*Vai realizar o cálculo da quantidade e multiplicar pelo valor em R$*/
+            tot = qtd * 1500;
+
+            /*Vai atribuir o valor do input cTot para variável tot*/
+            document.getElementById('cTot').value = tot;
+        }
+    </script>
+</head>
+<body>
+    <div id="interface">
+        <header id = "cabecalho">
+            <hgroup>
+                <h1>Google Glass</h1>
+                <h2>A revolução do Google está chegando</h2>
+            </hgroup> 
+            <figure class="foto-legenda">
+                <img id="icone" src="imagens/i5.jpeg"/>
+                <figcaption>
+                    <h3>Google Glass</h3>
+                    <p>Uma nova maneira de ver o mundo</p>
+                </figcaption>
+            </figure>
+        
+        <nav id="menu">
+            <h1>Menu Principal</h1>
+            <ul type="disc">
+                <li onmouseover="mudaFoto('imagens/i3.jpg')" onmouseout="mudaFoto('imagens/i5.jpeg')"><a href="site.html">Home</a></li>
+                <li onmouseover="mudaFoto('imagens/i7.jpg')" onmouseout="mudaFoto('imagens/i7.jpg')"><a href="site.html"><a href="specs.html">Especificações</a></li> 
+                <li><a href="fotos.html">Fotos</a></li>
+                <li><a href="multimidia.html">Multimídia</a></li>
+                <li><a href="fale-conosco.html">Fale conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="corpo-full">
+        <article id="noticia-principal">
+            <header id="cabecalho-artigo">
+            <hgroup>
+                <h3>Fale-conosco > Contato</h3>
+                <h1>Formulário de Contato</h1>
+                <h2>por Gustavo Guanabara</h2>
+                <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+            </hgroup>
+        </header>
+
+        <!--Formulário que vai enviar as informações para o action, type post por ser mais seguro, oninput = ao dar a entrada com os dados do formulário será acionada a função calc_total();-->
+        <form action="mailto:leslei.lima@gmail.com" id="fContato" method="post" oninput="calc_total();">
+            <fieldset id="usuario"> <!--fieldset é cada área diferente do meu formulário-->
+            <legend>identificação do Usuário</legend> <!--legend é a legenda do campo específico do formulário-->
+
+            <!--type text-->
+            <p><label for="cNome">Nome:</label><input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"><!--size = quantidade de cacteres que serão mostrados, maxlegth = max de caracteres que podem ser digitados na input, placeholder = mensagem dentro do input--></p>
+            
+            <!--type password-->
+            <p><label for="cSenha">Senha:</label><input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="Máx 8 dígitos"></p>
+
+            <!--type email-->
+            <p><label for="cMail">E-mail:</label><input type="email" name="tMail" id="cMail" size="20" maxlength="40" placeholder="Ex: abc.abc@gmail.com"></p>
+            <fieldset id="sexo"> <legend>Sexo</legend>
+
+                <!--mais de um input do tipo "ratio" devem ter o mesmo name, se não, ao marcar uma caixa a outra será automáticamente selecionada também-->
+                <input type="radio" name="tSexo" id="cMasc"><label for="cMasc">Masculino</label><br>
+
+                <!--<label for=""> vai referenciar o texto ao input, então ao clicar no texto também irá marcar o input, serve também para questões semânticas no form (O ideal é fazer em todos os campos que tiverem input's)-->
+
+                <input type="radio" name="tSexo" id="cFem"><label for="cFem">Feminino</label>
+            </fieldset> 
+            <p><label for="cNasc">Data de nascimento:</label><input type="date" name="tNasc" id="cNasc"></p>
+            </fieldset>
+            <fieldset id="endereco">
+            <legend>Endereço do Usuário</legend>
+            <p><label for="cRua">Logradouro:</label><input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder="Rua, Av, Trav..."></p>
+
+                <!--min = número mínimo que o usuário pode digitar, max = número máximo que o usuário pode digitar-->
+                <p><label for="cNum">Número:</label><input type="number" name="tNum" id="cNum" min="0" max="9999"></p>
+                <p><label for="cEst">Estado:</label>
+                
+                <!--select vai criar uma aba com opções para selerem selecionadas pelo usuário-->
+                <select name="tEst" id="cEst"> <!--select tem que ter o mesmo id do label-->
+
+                    <optgroup label="Região Sudeste"> <!--Grupo de option, label vai aparecer como títudo dentro do option-->
+
+                    <!--Opções do select-->
+                    <option value="RJ">Rio de Janeiro</option> <!--value="RJ" vai fazer com que, ao usuário enviar o formuário, será entregue o valor RJ ao invés de Rio de Janeiro, para o Banco de Dados-->
+                    <option selected>São Paulo</option> <!--<option selected> faz a opção ser a primeira a ser selecionada-->
+
+                    </optgroup>
+                </select></p>
+                <p><label for="cCid">Cidade:</label>
+                <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua Cidade" list="cidades"></p>
+
+                <!--datalist vai criar uma lista de opções no input type text, tendo que linkar no input com o código list="id datalist", também vai criar um autocomplemento-->
+                <datalist id="cidades">
+                    <option value="Rio de Janeiro"></option>
+                    <option value="Nova Iguaçu"></option>
+                    <option value="Niterói"></option>
+                    <option value="Belford Roxo"></option>
+                </datalist>
+
+            </fieldset>
+            <fieldset id="mensagem">
+            <legend>Mensagem do Usuário</legend>
+                <p><label for="cUrg">Grau de Urgência:</label> Min
+                    
+                    <!--type range cria um objeto que você pode arrastar para os lados, também pode definir os valores min e max para arrastar, step vai configurar quantos saltos ao arrastar o objeto, caso o valor max do objeto seja 10 e tiver setp = 5, então dará 2 saltos-->
+                <input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2">Máx</p>
+                <p><label for="cMsg">Mensagem:</label>
+
+                    <!--textarea cria uma caixa de mensagem onde o usuário pode escrever mensagens longas, cols = colunas, rows = linhas-->
+                <textarea name="tMsg" id="cMsg" cols="35" rows="5" placeholder="Deixe aqui sua mensagem!"></textarea></p>
+            </fieldset>
+            <fieldset id="pedido">
+            <legend>Quero um Google Glass</legend>
+
+            <!--type checkbox vai criar uma caixa de checagem, chacked faz a opção ficar automáticamente marcada-->
+            <p><input type="checkbox" name="tPed" id="cPed" checked>
+                <label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
+                <p><label for="cCor">Cor:</label>
+
+                    <!--type color faz parecer uma opção de paleta de cores, value é o valor que irá aparecer inicialmente ao usuário-->
+                <input type="color" name="tCor" id="cCor" value="#0000FF"></p>
+                <p><label for="cQtd">Quantidade:</label>
+                <input type="number" name="tQtd" id="cQtd" min="0" max="5" placeholder="máx 5"></p>
+                <p><label for="cTot">Preço Total: R$</label>
+
+                    <!--readonly impede o usuário de escrever no input, pois configura somente para a leitura e não para escrita-->
+                <input type="text" name="tTot" id="cTot" placeholder="Total a pagar" size="8" readonly></p>
+            </fieldset>
+
+            <!--Value vai ser a mensagem escrita no botão-->
+            <input type="submit" value="Enviar">
+
+            <!--Forma 1 de fazer o botão de envio com imagens: <input type="image" name="tEnviar" src="imagens/quebrado.jpg">-->
+
+        </form>
+
+        </article>
+    </section>
+
+        <footer id="rodape">
+            <p>Copyright &copy; 2023 - by Leslei Lima<br/>Youtube | Twitter</p>
+        </footer>
+    </div>
+</body>
+</html>

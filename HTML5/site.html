@@ -1,0 +1,144 @@
+<!DOCTYPE html> <!--Tag de configuração inicial, mostrando que estamos programando em HTML5-->
+<html lang="pt-br"> <!--Iniciando a tag HTML e configurando a linguagem-->
+<head> <!--Iniciando cabeçalho-->
+    <meta charset="UTF-8"> <!--character set para Brasil-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Estudo Curso em vídeo</title> <!--Título da página-->
+    <link rel="stylesheet" type="text/css" href="css/site.css" media="screen"/> <!--Linkando o arquivo css-->
+</head> <!--Fechando cabeçalho-->
+<script lang="JavaScript" src="funcoes.js"></script><!--Linando o arquivo js-->
+<body>
+    <div id = "interface"> <!--Divisão com id "interface"-->
+        <header id = "cabecalho"> <!--Cabeçalho-->
+            <hgroup> <!--Grupo de títulos-->
+                <h1>Google Glass</h1> <!--Título princial-->
+                <h2>A revolução do Google está chegando</h2> <!--Título secundário-->
+            </hgroup> <!--Terminando grupo de títulos-->
+            <figure class="foto-legenda"><!--Semântica para imagens-->
+                <img id="icone" src="imagens/i5.jpeg"/> <!--Imagem seem link-->
+                <figcaption> <!--Legenda da imagem-->
+                    <h3>Google Glass</h3>
+                    <p>Uma nova maneira de ver o mundo</p>
+                </figcaption>
+            </figure>
+
+            <nav id="menu"> <!--Menú de navegação-->
+                <h1>Menu Principal</h1>
+                <!--<ol type="1"> Existe type 1,a,A,i,I; adicionando start="" você pode decidir de quanto vai começar a lista-->
+                <ul type="disc"> <!--square, disc, circle-->
+                    <li onmouseover="mudaFoto('imagens/i3.jpg')" onmouseout="mudaFoto('imagens/i5.jpeg')"><!--chamando função com o diretório da foto--><a href="site.html">Home</a></li>  <!--Home vai levar pro arquivo "site.html"-->
+                    <li><a href="specs.html">Especificações</a></li> <!--Item da lista-->
+                    <li><a href="fotos.html">Fotos</a></li>
+                    <li><a href="multimidia.html">Multimídia</a></li>
+                        <!--<ul type="square">
+                            <li>Músicas</li>
+                            <li>Videos</li>
+                        </ul>-->
+                    <li><a href="fale-conosco.html">Fale conosco</a></li>
+                </ul><!--Fechando lista não ordenada-->
+                <!--</ol> Fechamento lista ordenada-->
+            </nav>
+        </header> <!--Fim do cabeçalho-->
+
+        <section id="corpo"> <!--Vai mostrar o conteúdo dentro da tag em outra divisão na tela, organizada pelo css na lateral-->
+        <article id="noticia-principal"> <!--Começo do artigo-->
+        <header id="cabecalho-artigo"><!--Cabeçalho do artigo(Pra não rececber a formatação do article)-->
+        </hgroup>
+            <hgroup> 
+            <h3>Tecnologia > &nbsp; Inovações</h3>
+            <h1>Saiba tudo sobre Google Glass</h1>
+
+            <h2>por Gustavo Guanabara</h2>
+            <h3 class="direita">Atualizado em 23/Abril/2013</h3>
+        </hgroup>
+        </header>
+        <h2>Símbolos especiais</h2>
+        <p>
+            &lt; <!--menor que-->
+            &gt; <!--maior que-->
+            &le; <!--menor igual a-->
+            &ge; <!--Maior igual a--> <br>
+
+            &pound; <!--Libras-->
+            &yen; <!--Yen-->
+            &euro; <!--Euro--> <br>
+
+            &copy; <!--copyright-->
+            &reg; <!--marca registrada-->
+            &trade; <!--TM--> <br>
+
+            &permil; <!--por mil-->
+            &sum; <!--Soma-->
+            &infin; <!--Infinito-->
+            &times; <!--Multiplicação-->
+            &plusmn; <!--mais ou menos-->     
+            &oplus; <!--+ dentro de circunferência-->
+            &radic; <!--raís-->
+            &ne; <!--diferente--> <br>
+
+            &delta; <!--Delta minúsculo-->
+            &Delta; <!--Delta maiúsculo-->
+            &Lambda;
+            &omega;
+            &phi; <!--Pi--> <br>
+
+            &larr; <!--Seta pra esquerda-->
+            &rarr; <!--Direita-->
+            &uarr; <!--Cima-->
+            &darr; <!--Baixo-->
+            &harr; <!--Seta para os dois lados--><br>
+
+            &spades;
+            &clubs;
+            &hearts;
+            &diams;
+
+        <h2 style="text-align: center;">O que é</h2>
+        <p style="text-align: justify; text-indent: 50px;"><b>Lorem ipsum dolor sit amet consectetur </b><!--Negrito--><i>Lorem ipsum dolor sit</i><!--Itálico--> amet consectetur, adipisicing elit. Hic ad com<wbr/><!--quebra as sílabas da palavra na quebra de linha-->modi ipsa, iste culpa vel officia tenetur error ipsum ita&shy;<!--quebra as sílabas da palavra na quebra de linha com hífen-->que eum, <del>consectetur asperiores</del><!--Riscar texto--> illo quisquam, facere consequuntur sunt deleniti neque.</p> <!--Parágrafo--> Lorem, ipsum dolor sit amet consectetur <span style="text-decoration: overline">adipisicing elit.</span><!--Formata pequenos trechos de textos (underline, line-through, none)--> Aliquid, ut? Laboriosam vitae ullam quidem ipsum obcaecati molestiae consequatur architecto, cum maxime nihil excepturi praesentium fugiat veniam illo omnis, <span style="font-weight: bold"><!--Outra formatação de texto (normal, bold, 100, 900)-->nostrum sit!</span><br>
+        <p>
+            <a href="https://www.kabum.com.br/produto/367680/processador-intel-core-i7-3770-3-geracao-3-40ghz-quad-core-8-threads-fclga-1155-oem" target="_blank">i5 3770</a>
+        </p>
+
+        </article>
+
+        </section>
+
+        <aside id="lateral"> <!--Vai mostrar o conteúdo dentro da tag em outra divisão na tela, organizada pelo css na lateral-->
+
+        <br>
+
+        X<sup>2</sup> = H<sub>2</sub>O
+
+        <pre> <!--Formata do jeito que escreve-->
+            <code> <!--Formata códigos-->
+                #include &lt;stdio.h&gt;
+                    int main(){
+                        printf("Olá mundo!!!");
+                    }
+            </code>
+        </pre>
+        <!--Tabela, tr = linha, td = coluna-->
+        <table id="tabelaspec">
+            <caption><!--Caption = legenda-->Tabela Técnica do Google Glass <span><!--Conteiner genérico-->Mar/2023</span></caption>
+            <tr><td class="ce">Tela</td><td class="cd">Resolução equivalente a tela de 25</td></tr>
+            <tr><td rowspan="2" class="ce"><!--Faz o td ocupar duas tr-->Camera</td><td class="cd">5MP para fotos</td></td></tr>
+            <tr><td class="cd">720p para vídeos</td></tr>
+            <tr><td rowspan="2" class="ce">Conectividade</td><td class="cd">Wi-Fi</td></tr>
+            <tr><td class="cd">Bluetooth</td></tr>
+            <tr><td class="ce">Memória Interna:</td><td class="cd">12GB</td></tr>
+            <tr><td colspan="2" class="ce"><!--Faz o td ocupar dois td-->Linha Extra</td></tr>
+        </table>
+
+        <h1>Lorem ipsum</h1><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque laboriosam vero accusamus, dolorum nulla eius molestiae illum inventore aspernatur doloribus eligendi ut placeat qui temporibus ducimus blanditiis praesentium officia sed.</p>
+        <h2>Lorem ipsum dolor </h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid nobis, aut iure iste culpa assumenda consectetur vel veniam quibusdam qui beatae nostrum, eaque facere in, dolores iusto nihil adipisci vero.</p>
+
+    </aside>
+
+        <footer id="rodape">
+            <p>Copyright &copy; 2023 - by Leslei Lima<br/>Youtube | Twitter</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+form{
+    width: 500px;
+    margin: auto;
+}
+
+/*input, textarea para Configurar a tag textarea junto com o input*/
+input, textarea{
+    font-size: 13pt;
+    font-family: sans-serif;
+    font-weight: normal; /*Para não ficar em negrito (????)*/
+    background-color: rgba(255, 255, 255,.8); /*Cria uma transparência na tag input para que a imagem de fundo não seja cortada pelo input*/
+}
+
+/*input:hover, textarea:hover para Configurar a animação da tag textarea junto com o input*/
+input:hover, textarea:hover{
+    background-color: #dddddd;
+}
+
+legend{
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+fieldset{
+    border-color: #cecece;
+    margin: 20px;
+}
+
+fieldset#sexo{
+    width: 150px;
+}
+
+fieldset#usuario{
+    background: url("imagens/i3.jpg") no-repeat 50% 50%;
+}
+
+fieldset#endereco{
+    background: url("imagens/i5.jpeg") no-repeat 50% 50%;
+}
+
+fieldset#mensagem{
+    background: url("imagens/quebrado.jpg") no-repeat 50% 50%;
+    color: white;
+}
+
+fieldset#pedido{
+    background: url("imagens/i7.jpg") no-repeat 50% 50%;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando js</title>
+    <script>
+        /*Declarando o modo quebrada como false*/
+        var quebrada = false; 
+
+        /*Função para mudar os estados do processador*/
+        function mudaProcessador(tipo){ /*Parâmetro "tipo" para diferenciar as imagens*/
+
+            if(!quebrada){ /*Se quebrada == false*/
+                document.getElementById("processador").src = "imagens/"+tipo+".jpg"; /*Mostrar na tela a imagem*/
+                if(tipo == 'quebrado'){ /*Se "tipo" for == 'quebrado'(nome da imagem)*/
+                    quebrada = true; /*quebrada = true, vai fazer a imagem continuar até atualizar a página*/
+                }
+            }
+        
+            //document.getElementById("processador").src="imagens/i3.jpg"; //Pega um elemento pelo id
+
+        }
+        /*function apagaLampada(){
+            document.getElementById("processador").src="imagens/i5.jpeg";
+        }
+        function processadorQuebrado(){
+            document.getElementById("processador").src="imagens/quebrado.jpg"
+        }*/
+    </script>
+</head>
+<body>
+    <h1>Testando JavaScript</h1>
+    <script>
+        //Escrevendo a data com JS
+        document.write("Olá! Hoje é dia "+Date())
+    </script>
+    <h1>Acenda a lâmpada</h1>
+
+    <!--Local onde vai aparecer as imagens-->
+    <img src="imagens/i7.jpg" id="processador" onmousemove="mudaProcessador('i3')" onmouseout="mudaProcessador('i7')" onclick="mudaProcessador('quebrado')"> <!--"onmousemove" quando passar o mouse em cima, "onmouseout" quando o mouse não estiver em cima, "onclick" quando clicar na imagem, nome do arquivo dentro dos "()" para indicar qual vai aparecer-->
+</body>
+</html>

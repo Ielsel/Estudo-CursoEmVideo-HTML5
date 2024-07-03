@@ -1,0 +1,278 @@
+@charset "UTF-8";
+/*@font-face{ fonte personalizada
+    font-family: 'FonteLogo'; nome da fonte
+    src: url("../pasta/nome do arquivo"); local do arquivo da fonte
+}*/
+/*Configurando parágrafo*/
+p{ /*Tag universal*/
+    text-align: justify; /*alinha o texto do começo ao fim*/
+    text-indent: 50px; /*Cria um espaço de parágafo*/
+}
+
+/*Configurando img "icone" do cabeçalho*/
+header#cabecalho img#icone{
+    position: absolute;
+}
+
+/*Configurando cabeçalho*/
+header#cabecalho{
+    border-bottom: 1px #606060 solid; /*Vai criar uma linha de divisão do cabeçalho*/
+    height: 150px;
+    background: url("../imagens/i5.jpeg") no-repeat 300px -10px;/*Vai criar um background*/
+}
+
+/*Configurando h1 do cabeçalho*/
+header#cabecalho h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    padding: 0px;
+    margin-bottom: 0px; /*margem de baixo*/
+}
+
+/*Configurando h2 do cabeçalho*/
+header#cabecalho h2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #888888;
+    font-size: 15pt;
+    padding: 0px;
+    margin-top: 0px;
+}
+
+a{
+    color: #606060;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+/*Configurando body*/
+body{
+    /*background-color: rgb(red, green, blue);*/
+    background-image: url("diretório da imagem");
+    background-color: rgba(0, 0, 0, 0.1); /*O último número é a transparência*/
+    background-color: hsla(hue, saturation, lightness, alpha);
+    font-family: Arial, sans-serif;
+}
+
+/*Configurando div de tag interface*/
+div#interface{
+    width: 900px;
+    background-color: #ffffff;
+    margin: -20px auto 10px auto; /*Cima, Direita, baixo, esquerda, auto deixa centralizado*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /*Deslocamento lateral, Vertical, espalhamento da sobra, cor da sombra*/
+    padding: 10px;
+}
+
+/*Configurando a figure "foto-legenda"*/
+figure.foto-legenda{
+    position: absolute; /*Posição relativa, depende de onde o código está*/
+    border: 8px solid white; /*arrumando a borda*/
+    box-shadow: 1px 1px 4px black; /*sombra*/
+    width: 150px;
+    height: 150px;
+    left: 1300px;
+    top: 50px;
+}
+
+/*Configurando a imagem da figure "foto-legenda"*/
+figure.foto-legenda img{
+    width: 150px;
+    height: 150px;
+}
+
+/*Configurando figcaption*/
+figure.foto-legenda figcaption{
+    opacity: 0; 
+    position: absolute; /*posição absoluta dentro do conteiner*/
+    top: 0px;
+    background-color: rgba(0,0,0,.4);
+    color: white;
+    width: 150px;
+    height: 150px;
+    padding: 10px; /*Afasta a figcaption muito da borda*/
+    box-sizing: border-box;
+    transition: opacity 1s; /*tempo de transição da upacidade*/
+}
+
+/*Ao passar o mouse em cima vai aparecer o figcaption*/
+figure.foto-legenda:hover figcaption{
+    opacity: 1;
+}
+
+/*Formatação do menu*/
+
+nav#menu{/*Configurando a tag nav de id "menu"*/
+    display: block; /*display block vai permitir o menu flutuar pela tela*/
+}
+
+nav#menu ul{ /*Configurando ul da tag nav de id "menu"*/
+    list-style-type: none; /*Vai configurar a formatação original da lista*/
+    text-transform: uppercase; /*Vai deixar o texto em maiúsculo*/
+    position: absolute; /*Permite configurar o posicionamento pela tela inteira*/
+    top: -20px;
+    left: 900px;
+}
+
+nav#menu li{ /*Configurando li da tag nav de id "menu"*/
+    display: inline-block; /*Vai fazer o bloco ser mostrado em uma linha*/
+    background-color: #dddddd;
+    padding: 10px; /*Espaço dentro do objeto*/
+    margin: 2px;/*Espaço fora do objeto*/
+    transition: background-color 1s;
+}
+
+/*Configurando animação da lista menu*/
+nav#menu li:hover{
+    background-color: #606060;
+}
+
+nav#menu h1{ /*Configurando h1 da tag nav de id "menu"*/
+    display: none; /*Deixando o h1 invisível*/
+}
+
+/*COnfigurando Link do menu*/
+nav#menu a{
+    color:black;
+    text-decoration: none; /*Tirando o sublinhado do link*/
+}
+
+/*Configurando animação do Link do menu*/
+nav#menu a:hover{
+    color: white;
+    text-decoration: underline; /*Coloca o sublinhado no link*/
+}
+
+/*Configurando section/texto lateral esquerdo*/
+section#corpo{
+    display: block; /*Para ser mostrado como um bloco*/
+    width: 500px;
+    float: left;/*Faz flutuar o texto pra esquerda*/
+    border-right: 1px solid #606060;
+    padding-right: 20px;
+}
+
+/*Configurando o aside/conteúdo lateral direito*/
+aside#lateral{
+    display: block; /*Para ser mostrado como um bloco*/
+    width: 350px;
+    float: right; /*Alinhamento para a direita*/
+    background-color: #dddddd;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+/*Configurando rodapé*/
+footer#rodape{
+    clear: both; /*Faz o conteúdo do rodapé não bugar com o float do aside e section, vai aparecer fora dessa divisão*/
+    border-top: 1px solid #606060;
+}
+
+/*Configurando o parágrtafo do rodapé*/
+footer#rodape p{
+    text-align: center;
+}
+
+/*Configurando a table*/
+table#tabelaspec{
+    border: 1px solid #606060; 
+    border-spacing: 0px; /*Configura a borda da tabela*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Configurando a coluna td geral*/
+table#tabelaspec td{
+    border: 1px solid #606060; 
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/*Configurando a coluna "ce" do table*/
+table#tabelaspec td.ce{
+    color: white;
+    background-color: #606060;
+    vertical-align: top;
+    font-weight: bold; /*Negrito*/
+}
+
+/*Configurando a coluna "cd" do table*/
+table#tabelaspec td.cd{
+    background-color: #cecece;
+}
+
+/*Configurando o caption do table*/
+table#tabelaspec caption{
+    color: #888888;
+    font-size: 20pt;
+    font-weight: bold; /*Negrito*/
+}
+
+/*Configurando o span do table*/
+table#tabelaspec caption span{
+    display: block;
+    float: right;
+    color: black;
+    font-size: 8pt;
+    margin-top: 20px;
+}
+
+/*Configurando h2 article*/
+article#noticia-principal h2{
+    font-size: 12pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 0px;
+    margin: 10px 0px 10px 0px;
+}
+
+header#cabecalho-artigo h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 13pt;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+header#cabecalho-artigo h2{
+    font-size: 13pt;
+    color: #cecece;
+    background-color: #ffffff;
+    margin: 0px;
+}
+
+/*Configurando textos de class "direita"*/
+.direita{
+    text-align: right;
+}
+
+header#cabecalho-artigo h3{
+    font-size: 12pt;
+    color: #606060;
+
+}
+
+aside#lateral h1{   
+    background-color: #606060;
+    font-size: 20pt;
+    color: white;
+    padding: 5px;
+    margin-bottom: 0px;
+}
+
+aside#lateral h2{
+    background-color: #606060;
+    font-size: 13pt;
+    color: #ffffff;
+    padding: 5px;
+}
+
+aside#lateral p{
+    margin-top: 0px;
+}
